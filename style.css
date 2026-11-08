@@ -1,0 +1,1717 @@
+
+/* ==========================
+   GECEK - IDENTIDADE VISUAL
+========================== */
+
+:root {
+    --background: #030611;
+    --surface: #080f20;
+    --surface-light: #0c1830;
+    --blue: #087cff;
+    --cyan: #00e5ff;
+    --white: #f4f8ff;
+    --muted: #a0aec4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+/* CABECALHO */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(3, 6, 17, 0.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(0, 229, 255, 0.12);
+}
+
+.navbar {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand img {
+    width: 105px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: var(--muted);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--cyan);
+}
+
+.nav-button {
+    padding: 13px 20px;
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    color: var(--cyan);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: var(--blue);
+    color: white;
+    box-shadow: 0 0 25px rgba(0, 124, 255, 0.4);
+}
+
+.nav-button span {
+    margin-left: 8px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 690px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 80% 45%,
+        rgba(0, 100, 255, 0.16), transparent 45%),
+        linear-gradient(130deg, #030611, #071126);
+}
+
+.hero-glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(0, 180, 255, 0.09);
+    filter: blur(100px);
+    right: 10%;
+    top: 15%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    padding: 90px 0;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cyan);
+    font-size: 11px;
+    letter-spacing: 2px;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    padding: 12px 15px;
+    border-radius: 30px;
+    background: rgba(0, 229, 255, 0.04);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 12px var(--cyan);
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 67px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin: 30px 0 20px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.about-text h2 span,
+.contact h2 span {
+    background: linear-gradient(90deg, #008cff, #00e5ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-text > p {
+    max-width: 540px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 17px 23px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background: linear-gradient(110deg, #087cff, #00b9ec);
+    box-shadow: 0 0 25px rgba(0, 124, 255, 0.25);
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 35px rgba(0, 229, 255, 0.4);
+}
+
+.btn-outline {
+    padding: 16px 22px;
+    border: 1px solid #263c60;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+}
+
+.hero-note {
+    margin-top: 35px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.hero-note span {
+    color: var(--cyan);
+}
+
+/* LOGO E ELEMENTOS FLUTUANTES */
+
+.hero-visual {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    width: 340px;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    background: radial-gradient(
+        circle,
+        rgba(0, 140, 255, 0.12),
+        transparent 70%
+    );
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 25px rgba(0, 160, 255, 0.35));
+    border-radius: 50%;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 50%;
+}
+
+.orbit-one {
+    width: 380px;
+    height: 380px;
+    animation: rotate 25s linear infinite;
+}
+
+.orbit-two {
+    width: 440px;
+    height: 440px;
+    border-style: dashed;
+    border-color: rgba(0, 124, 255, 0.22);
+    animation: rotate 35s linear infinite reverse;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.floating-card {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 15px;
+    background: rgba(8, 20, 43, 0.92);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-card > span {
+    color: var(--cyan);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.floating-card strong {
+    display: block;
+    font-size: 12px;
+}
+
+.floating-card small {
+    display: block;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+.card-top {
+    top: 50px;
+    right: -10px;
+}
+
+.card-bottom {
+    bottom: 45px;
+    left: -10px;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #64748b;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.scroll-line {
+    width: 50px;
+    height: 1px;
+    background: var(--cyan);
+}
+
+/* TITULOS */
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.eyebrow {
+    color: var(--cyan);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* SERVICOS E CARROSSEL */
+
+.services {
+    background: #050a18;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.55s ease;
+    will-change: transform;
+}
+
+.carousel-slide {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-height: 340px;
+    padding: 35px;
+    position: relative;
+    border: 1px solid #172c4c;
+    border-radius: 15px;
+    background: linear-gradient(
+        145deg,
+        #0b1930,
+        #070d1c
+    );
+    transition: 0.3s;
+}
+
+.carousel-slide:hover {
+    border-color: var(--cyan);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 124, 255, 0.1);
+}
+
+.slide-number {
+    color: #60738f;
+    font-size: 12px;
+}
+
+.slide-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    margin: 25px 0;
+    color: var(--cyan);
+    font-size: 28px;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(0, 229, 255, 0.07);
+}
+
+.slide-category {
+    color: var(--cyan);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.carousel-slide h3 {
+    font-size: 24px;
+    margin: 13px 0;
+}
+
+.carousel-slide p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.slide-link {
+    display: inline-block;
+    color: var(--cyan);
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.slide-link span {
+    margin-left: 8px;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 25px;
+    height: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #263752;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    width: 45px;
+    background: var(--cyan);
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+}
+
+.carousel-arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-arrows button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #29405f;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-arrows button:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+}
+
+/* SOBRE */
+
+.about {
+    background:
+        radial-gradient(
+            circle at 10% 50%,
+            rgba(0, 124, 255, 0.09),
+            transparent 40%
+        );
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-visual {
+    position: relative;
+    min-height: 370px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, #0a1730, #030611);
+    border: 1px solid #17375c;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.about-logo {
+    width: 260px;
+    height: 260px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 25px rgba(0, 180, 255, 0.3));
+}
+
+.about-decoration {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgba(0, 124, 255, 0.15);
+}
+
+.about-text h2 {
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.about-text p {
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--cyan);
+}
+
+/* DIFERENCIAIS */
+
+.benefits {
+    background: #050a18;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.benefit-card {
+    padding: 30px 22px;
+    border: 1px solid #172c4c;
+    border-radius: 12px;
+    background: #091326;
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-6px);
+}
+
+.benefit-card > span {
+    color: var(--cyan);
+    font-size: 13px;
+}
+
+.benefit-card h3 {
+    margin: 25px 0 12px;
+    font-size: 19px;
+}
+
+.benefit-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* PROCESSO */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-item {
+    border-top: 1px solid #1c3a60;
+    padding-top: 25px;
+}
+
+.process-item > span {
+    font-size: 30px;
+    color: var(--cyan);
+    font-weight: bold;
+}
+
+.process-item h3 {
+    margin: 20px 0 12px;
+}
+
+.process-item p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* CONTATO */
+
+.contact {
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(0, 100, 255, 0.2),
+            transparent 65%
+        ),
+        #071126;
+    border-top: 1px solid #153050;
+    border-bottom: 1px solid #153050;
+}
+
+.contact-content {
+    max-width: 850px;
+}
+
+.contact h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.contact p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* RODAPE */
+
+.footer {
+    background: #02040c;
+    padding: 35px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-brand img {
+    width: 100px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.footer-brand p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.footer-copy {
+    color: #718096;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 950px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carousel-slide {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+}
+    
+/* =================================
+   GECEK - ORBITA FUTURISTA
+================================= */
+
+.hero-visual {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+}
+
+/* LOGO CENTRAL */
+
+.logo-container {
+    width: 310px;
+    height: 310px;
+    position: relative;
+    z-index: 3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #020611;
+
+    box-shadow:
+        0 0 30px rgba(0, 140, 255, 0.18),
+        0 0 75px rgba(0, 229, 255, 0.12);
+
+    animation: giroLogo 60s linear infinite;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* GIRO LENTO DA LOGO */
+
+@keyframes giroLogo {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* CIRCULOS EXTERNOS */
+
+.orbit {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.orbit-one {
+    width: 390px;
+    height: 390px;
+    border: 1px solid rgba(0, 229, 255, 0.25);
+}
+
+.orbit-two {
+    width: 470px;
+    height: 470px;
+    border: 1px dashed rgba(0, 124, 255, 0.22);
+}
+
+/* ORBITA DAS FRASES */
+
+.orbit-animation {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    z-index: 5;
+    border-radius: 50%;
+    animation: girarFrases 36s linear infinite;
+}
+
+@keyframes girarFrases {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* CARTOES */
+
+.orbit-phrase {
+    position: absolute;
+    width: 225px;
+    min-height: 65px;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: rgba(5, 17, 38, 0.96);
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    border-radius: 12px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+
+    /* Mantém os textos na posição normal */
+    animation: manterTexto 36s linear infinite;
+}
+
+.orbit-phrase span {
+    color: #00e5ff;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.orbit-phrase p {
+    color: #eaf6ff;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* POSICAO DAS TRES FRASES */
+
+.phrase-one {
+    top: -30px;
+    left: 50%;
+    margin-left: -112px;
+}
+
+.phrase-two {
+    bottom: 25px;
+    right: -100px;
+}
+
+.phrase-three {
+    bottom: 25px;
+    left: -100px;
+}
+
+/* TEXTO SEM GIRAR */
+
+@keyframes manterTexto {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    .hero-visual {
+        min-height: 440px;
+        overflow: hidden;
+    }
+
+    .logo-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    .orbit-one {
+        width: 280px;
+        height: 280px;
+    }
+
+    .orbit-two {
+        width: 340px;
+        height: 340px;
+    }
+
+    .orbit-animation {
+        width: 340px;
+        height: 340px;
+    }
+
+    .orbit-phrase {
+        width: 165px;
+        min-height: 55px;
+        padding: 9px;
+        gap: 7px;
+    }
+
+    .orbit-phrase span {
+        font-size: 15px;
+    }
+
+    .orbit-phrase p {
+        font-size: 9px;
+    }
+
+    .phrase-one {
+        top: -10px;
+        margin-left: -82px;
+    }
+
+    .phrase-two {
+        right: -50px;
+        bottom: 20px;
+    }
+
+    .phrase-three {
+        left: -50px;
+        bottom: 20px;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-container,
+    .orbit-animation,
+    .orbit-phrase {
+        animation: none !important;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .navbar {
+        height: 72px;
+    }
+
+    .brand img {
+        width: 85px;
+        height: 55px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        background: #071126;
+        border-bottom: 1px solid #18375b;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        padding: 75px 0;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: -1px;
+    }
+
+    .hero-text > p {
+        font-size: 15px;
+    }
+
+    .hero-visual {
+        min-height: 330px;
+    }
+
+    .logo-container {
+        width: 240px;
+        height: 240px;
+    }
+
+    .orbit-one {
+        width: 275px;
+        height: 275px;
+    }
+
+    .orbit-two {
+        width: 310px;
+        height: 310px;
+    }
+
+    .floating-card {
+        padding: 10px;
+    }
+
+    .floating-card strong {
+        font-size: 10px;
+    }
+
+    .card-top {
+        right: 0;
+    }
+
+    .card-bottom {
+        left: 0;
+    }
+
+    .hero-bottom {
+        display: none;
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%;
+        min-height: 350px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-visual {
+        min-height: 300px;
+    }
+
+    .about-logo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions a {
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* PROVA SOCIAL GECEK */
+
+.testimonials {
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(0, 100, 255, 0.10),
+            transparent 65%
+        ),
+        #030817;
+
+    border-top: 1px solid rgba(0, 229, 255, 0.12);
+    overflow: hidden;
+}
+
+.testimonial-window {
+    width: 100%;
+    overflow: hidden;
+}
+
+.testimonial-track {
+    display: flex;
+    gap: 22px;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+    flex: 0 0 calc((100% - 44px) / 3);
+    padding: 32px;
+    min-height: 310px;
+
+    background: linear-gradient(
+        145deg,
+        #0c1b35,
+        #070d1c
+    );
+
+    border: 1px solid #1b385e;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    border-color: #00e5ff;
+    transform: translateY(-5px);
+}
+
+.client-avatar {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    border: 2px solid #00bfff;
+    background: #0b2443;
+    color: #00e5ff;
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+.stars {
+    color: #00e5ff;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.testimonial-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.testimonial-card small {
+    color: #8495b0;
+}
+
+.testimonial-card p {
+    color: #b0bdd0;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.client-service {
+    color: #00e5ff;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.testimonial-controls button {
+    width: 45px;
+    height: 45px;
+    color: white;
+    border: 1px solid #1c527d;
+    background: #09172b;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.testimonial-controls button:hover {
+    background: #087cff;
+}
+
+#testimonialDots {
+    display: flex;
+    gap: 8px;
+}
+
+.testimonial-dot {
+    width: 9px;
+    height: 9px;
+    border: none;
+    border-radius: 50%;
+    background: #38516e;
+    cursor: pointer;
+}
+
+.testimonial-dot.active {
+    background: #00e5ff;
+}
+
+@media (max-width: 950px) {
+    .testimonial-card {
+        flex-basis: calc((100% - 22px) / 2);
+    }
+}
+
+@media (max-width: 700px) {
+    .testimonial-card {
+        flex-basis: 100%;
+    }
+}
+
+/* =====================================
+   CORREÇÃO DEFINITIVA - ORBITA GECEK
+===================================== */
+
+.hero-visual {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+/* ORBITA DAS FRASES */
+
+.orbit-animation {
+    position: absolute !important;
+
+    width: 450px !important;
+    height: 450px !important;
+
+    top: 50% !important;
+    left: 50% !important;
+
+    margin: 0 !important;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    z-index: 5;
+
+    animation: gecekOrbita 30s linear infinite !important;
+
+    will-change: transform;
+}
+
+/* MOVIMENTO CONTINUO */
+
+@keyframes gecekOrbita {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* FRASES */
+
+.orbit-phrase {
+    position: absolute !important;
+
+    width: 225px !important;
+    min-height: 65px;
+
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+
+    animation: gecekContraGiro 30s linear infinite !important;
+
+    will-change: transform;
+}
+
+/* CONTRA-ROTAÇÃO PARA MANTER O TEXTO LEGÍVEL */
+
+@keyframes gecekContraGiro {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/* POSIÇÃO DAS FRASES */
+
+.phrase-one {
+    top: -32px !important;
+    left: 50% !important;
+    margin-left: -112px !important;
+}
+
+.phrase-two {
+    top: 50% !important;
+    right: -105px !important;
+    bottom: auto !important;
+}
+
+.phrase-three {
+    top: 50% !important;
+    left: -105px !important;
+    bottom: auto !important;
+}
+
+/* ANIMAÇÃO SEM TREMORES */
+
+.orbit-animation,
+.orbit-phrase {
+    backface-visibility: hidden;
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .orbit-animation {
+        width: 340px !important;
+        height: 340px !important;
+    }
+
+    .orbit-phrase {
+        width: 165px !important;
+        min-height: 55px;
+    }
+
+    .phrase-one {
+        margin-left: -82px !important;
+        top: -10px !important;
+    }
+
+    .phrase-two {
+        right: -55px !important;
+    }
+
+    .phrase-three {
+        left: -55px !important;
+    }
+}
+
+/* =====================================
+   GECEK - CARROSSEL CONTINUO
+===================================== */
+
+.testimonial-window {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+}
+
+.testimonial-window:active {
+    cursor: grabbing;
+}
+
+.testimonial-track {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    width: max-content !important;
+    gap: 22px !important;
+    transition: none !important;
+    animation: none !important;
+    will-change: transform;
+}
+
+.testimonial-card {
+    flex: 0 0 350px !important;
+    width: 350px !important;
+    box-sizing: border-box;
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+    .testimonial-card {
+        flex: 0 0 280px !important;
+        width: 280px !important;
+    }
+}
+
+
+
+/* TAMANHO E FORMATO DAS FOTOS */
+
+.testimonial-card .client-avatar {
+    width: 70px !important;
+    height: 70px !important;
+    min-width: 70px !important;
+    max-width: 70px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    position: relative;
+    display: block;
+    border: 2px solid #00dfff;
+}
+
+.testimonial-card .client-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center 25%;
+    display: block;
+    transform: none !important;
+} 
+
+/* CORREÇÃO DEFINITIVA DAS FOTOS */
+
+.client-avatar {
+    width: 85px !important;
+    height: 85px !important;
+    min-width: 85px !important;
+    max-width: 85px !important;
+    overflow: hidden !important;
+    border-radius: 50% !important;
+    position: relative !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+}
+
+.client-avatar img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 50% !important;
+    transform: none !important;
+    max-width: 100% !important;
+}
+/* =====================================================
+   RESPONSIVIDADE - GECEK
+   CELULAR + TABLET + NOTEBOOK + DESKTOP
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* IMAGENS NUNCA PASSAM DA TELA */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.container {
+    width: min(1200px, 92%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.6rem, 5vw, 2.5rem);
+    }
+
+    /* evita elementos muito grandes */
+
+    section {
+        overflow: hidden;
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    /* TEXTOS */
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* BOTÕES */
+
+    button,
+    .btn,
+    a {
+        max-width: 100%;
+    }
+
+    /* SEÇÕES */
+
+    section {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* EVITA ELEMENTOS SAINDO DA TELA */
+
+    .hero,
+    .container,
+    .services,
+    .testimonials,
+    .testimonial-window {
+        max-width: 100%;
+    }
+
+    /* IMAGENS */
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ==========================================
+   AJUSTE FINAL PARA CELULAR
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 92%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* TÍTULOS */
+    h1 {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        line-height: 1.05;
+    }
+
+    h2 {
+        font-size: clamp(1.7rem, 8vw, 2.8rem);
+        line-height: 1.1;
+    }
+
+    h3 {
+        font-size: clamp(1.2rem, 6vw, 1.8rem);
+    }
+
+    /* IMAGENS */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* BOTÕES */
+    button,
+    .btn {
+        max-width: 100%;
+    }
+
+    /* HERO */
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* SERVIÇOS */
+    .services {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* DEPOIMENTOS */
+    .testimonials {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .testimonial-window {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* CARDS */
+    .service-card,
+    .testimonial-card {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+}
